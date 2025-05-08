@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MicroTech Soluções</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+    <style>
+
+        #topo-fixo {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #f5deb3;
+            padding: 10px 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        #topo-fixo h1 {
+            margin: 0;
+            font-family: 'Impact', sans-serif;
+            font-weight: bold;
+            font-size: 1.5em;
+            color: black;
+        }
+
+        header {
+            margin-top: 50px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-family: 'Impact', sans-serif;
+            font-weight: bold;
+            font-size: 2em;
+            margin: 0;
+        }
+
+        .navegacao-top {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .navegacao-top button {
+            padding: 8px 12px;
+            font-size: 14px;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+            background-color: #ddd;
+            transition: background-color 0.3s;
+        }
+
+        .navegacao-top button:hover {
+            background-color: #ccc;
+        }
+
+        nav {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        nav ul li {
+            margin: 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #eee;
+        }
+
+        section {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ccc;
+            margin: 20px auto;
+            max-width: 800px;
+            border-radius: 8px;
+            font-family: 'Arial', sans-serif;
+            margin-top: 80px;
+        }
+
+        section.active {
+            display: block;
+        }
+        h2 {
+            color: #654321;
+            font-family: 'Impact', sans-serif;
+            font-weight: bold;
+            margin-top: 0;
+        }
+
+        h3 {
+            color: #8B4513; 
+            font-family: 'Comfortaa', cursive;
+            font-weight: normal;
+            margin-top: 20px;
+        }
+
+        .saiba-mais {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #f5deb3;
+            color: #000;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .saiba-mais:hover {
+            background-color: #e5cba0;
+        }
+
+        ul.equipe {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="topo-fixo">
+        <h1>MicroTech Soluções</h1>
+    </div>
+
+    <header>
+        <h1>MicroTech Soluções</h1>
+
+        <div class="navegacao-top">
+            <button onclick="mostrarPagina(1)">Página 1</button>
+            <button onclick="mostrarPagina(2)">Página 2</button>
+            <button onclick="mostrarPagina(3)">Página 3</button>
+            <button onclick="mostrarPagina(4)">Página 4</button>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#" onclick="mostrarPagina(1)">Página 1</a></li>
+            <li><a href="#" onclick="mostrarPagina(2)">Página 2</a></li>
+            <li><a href="#" onclick="mostrarPagina(3)">Página 3</a></li>
+            <li><a href="#" onclick="mostrarPagina(4)">Página 4</a></li>
+        </ul>
+    </nav>
+
+    <section id="Home" class="active">
+        <h2 style="font-family: 'Arial Rounded MT Bold', cursive;">Sobre a Empresa</h2>
+        <p>
+            Somos uma empresa 100% virtual especializada em criar sites personalizados para outras empresas. Nosso objetivo é fornecer soluções digitais eficientes, modernas e sob medida para impulsionar sua presença online.
+        </p>
+        <p>
+            Com uma equipe dedicada e experiência no mercado, entregamos projetos de alta qualidade, atendendo às necessidades específicas de cada cliente com agilidade e profissionalismo.
+        </p>
+        <h2 style="font-family: 'Arial Rounded MT Bold', cursive;">Nossos Produtos</h2>
+        <p>
+            Oferecemos uma variedade de produtos digitais, incluindo sites institucionais, lojas virtuais, blogs, landing pages e sistemas personalizados, tudo adaptado às necessidades do seu negócio. Nosso foco é criar soluções que aumentem sua visibilidade e potencializem seus resultados.
+        </p>
+        <p>
+            Além disso, temos pacotes de manutenção, hospedagem e suporte técnico para garantir que seu site permaneça atualizado, seguro e eficiente após o lançamento.
+        </p>
+        <a href="#index" class="saiba-mais" onclick="mostrarPagina(1); return false;">Saiba mais</a>
+        <br><br>
+        <a id="index"></a>
+    </section>
+
+    <section id="Serviços">
+        <h2 style="font-family: 'Arial Rounded MT Bold', cursive;">Termos de licença e exemplos de serviços</h2>
+        <h3>Condições de uso</h3>
+        <p>
+            Nossos produtos são desenvolvidos com base em licenças específicas que garantem a legalidade e o uso adequado de nossas soluções. Ao adquirir nossos serviços, você concorda com os termos de licença, que asseguram a propriedade intelectual e o uso responsável dos recursos fornecidos.
+        </p>
+        <h3>Exemplos de serviços</h3>
+        <p>
+            Entre os exemplos de serviços que oferecemos estão a criação de sites institucionais, lojas virtuais, landing pages personalizadas e integrações de sistemas. Empresas renomadas como TechSolutions, EcoViva e MarketPlus já utilizam nossos produtos e confiaram na qualidade de nossos serviços, permitindo a exposição de seus nomes em nosso site como parceiros de sucesso. Essa parceria demonstra nosso compromisso em oferecer soluções confiáveis e de alta performance para negócios de todos os portes.
+        </p>
+        <p>
+            Para conferir um exemplo de um site criado por nossa equipe, acesse: <a href="http://127.0.0.1:5500/index.html" target="_blank">http://127.0.0.1:5500/index.html</a>
+        </p>
+    </section>
+
+    <section id="Sobre nós">
+        <h2 style="font-family: 'Arial Rounded MT Bold', cursive;">Quem somos</h2>
+        <p>
+            Somos uma equipe apaixonada por tecnologia, design e inovação, composta por cinco profissionais dedicados a entregar o melhor para nossos clientes:
+        </p>
+        <ul class="equipe">
+            <li><strong>Filipe</strong> – Fundador e especialista em estratégia digital, lidera o time com foco em inovação e soluções sob medida.</li>
+            <li><strong>Luís Otávio</strong> – Desenvolvedor front-end, responsável por criar interfaces intuitivas e atraentes, garantindo uma experiência de usuário excepcional.</li>
+            <li><strong>Flausio Nunes</strong> – Designer gráfico, transforma conceitos em designs visualmente impactantes que traduzem a essência de cada marca.</li>
+            <li><strong>Gabriel José</strong> – Programador back-end, cuida da robustez e segurança dos sites, garantindo estabilidade e desempenho.</li>
+            <li><strong>Lucas Lemos</strong> – Consultora de atendimento ao cliente, dedicada a entender as necessidades de cada parceiro e oferecer suporte personalizado.</li>
+        </ul>
+        <p>Juntos, trabalhamos para criar soluções digitais que conectam empresas e clientes de forma eficiente e inovadora.</p>
+        <p>Agradecemos a todos os colaboradores pelo esforço e dedicação em fazer nossa empresa crescer!</p>
+    </section>
+
+    <section id="Certificados">
+        <h2 style="font-family: 'Arial Rounded MT Bold', cursive;">Nossa formação técnica</h2>
+        <p>
+            Nossa equipe possui uma sólida formação em lógica de programação e desenvolvimento de algoritmos, com conhecimentos aprofundados em Tabela Verdade, C++ e Portugol. Essa base técnica nos permite criar soluções eficientes, bem estruturadas e confiáveis, garantindo que cada projeto seja desenvolvido com precisão, clareza e eficiência.
+        </p>
+        <p>
+            A compreensão da Tabela Verdade é fundamental para a elaboração de sistemas que envolvem lógica proposicional, condicionais e operações booleanas, possibilitando a criação de algoritmos que funcionam de forma consistente e segura.
+        </p>
+        <p>
+            O domínio de C++ nos proporciona uma linguagem poderosa, versátil e amplamente utilizada no desenvolvimento de softwares de alto desempenho, sistemas embarcados, jogos e aplicações que exigem alto nível de eficiência. Com C++, somos capazes de criar programas robustos, otimizados e escaláveis, atendendo às necessidades de clientes que buscam soluções avançadas e de alta qualidade.
+        </p>
+        <p>
+            Já o uso do Portugol nos permite criar algoritmos de maneira mais acessível e didática, ideal para o planejamento e a compreensão de processos complexos de forma simples e visual. Essa linguagem de fácil entendimento serve como uma ferramenta educativa e de prototipagem, facilitando a comunicação de ideias entre desenvolvedores e clientes, além de acelerar o processo de desenvolvimento inicial de projetos.
+        </p>
+        <p>
+            Essa combinação de conhecimentos técnicos nos capacita a oferecer serviços de alta qualidade em diversas áreas, desde a criação de algoritmos eficientes até o desenvolvimento de softwares completos. Nosso compromisso é sempre aplicar essa base sólida para entregar soluções inovadoras, confiáveis e alinhadas às necessidades específicas de cada cliente, promovendo tecnologia de ponta acessível e eficiente.
+        </p>
+    </section>
+
+
+    <script>
+        function mostrarPagina(numero) {
+            
+            const paginas = document.querySelectorAll('section');
+            paginas.forEach(p => p.classList.remove('active'));
+
+            const paginaSelecionada = document.getElementById('pagina' + numero);
+            if (paginaSelecionada) {
+                paginaSelecionada.classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>
